@@ -7,14 +7,14 @@ order: 3
 
 <br/>
 
-My name is Thomas Neidhart and this page outlines a few of the things I have done in the past and I am working on currently.
+My name is Thomas Neidhart and this webpage outlines a few of the things I have done in the past and I am working on currently.
 
 In the past I have been involved as
 
 <ul>
 <li>an active member of the Apache Software Foundation</li>
 <li>product lead of ProGuard / DexGuard</li>
-<li>software developer for Air traffic management software and simulation (Airtopsoft, Eurocontrol)</li>
+<li>software developer for air traffic management systems and simulators (Airtopsoft, Eurocontrol)</li>
 </ul>
 
 I consider myself an expert in the Java / Android ecosystem, ranging from low-level bytecode engineering to library and
