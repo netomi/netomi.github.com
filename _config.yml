@@ -1,0 +1,29 @@
+# Site settings
+title: thomas neidhart - open source projects.
+email: thomas.neidhart@gmail.com
+description: >
+  Thomas Neidhart - Software Engineering, Bytecode Engineering, Open Source Development, Algorithm Development
+url: "https://netomi.github.io"
+github_username: netomi
+repository: netomi/netomi.github.io
+google_analytics: UA-70394167-2
+
+# Build settings
+markdown: kramdown
+
+highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
