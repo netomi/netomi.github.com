@@ -10,10 +10,10 @@ category: game
 tags: java openjfx mvc
 ---
 
-Simple life is small simulator for Conway's Game of Life. It allows to graphically modify the initial configuration
+Simple life is simple simulator for Conway's Game of Life. It allows to graphically modify the initial configuration
 and simulate evolutions of this configuration with varying speeds.
 
-THe project was my first experience developing a JavaFX / OpenJFX application and get used to its MVC approach and
+The project was my first experience developing a JavaFX / OpenJFX application and get used to its MVC approach and
 property binding capability.
 
 <div class="img_row">
