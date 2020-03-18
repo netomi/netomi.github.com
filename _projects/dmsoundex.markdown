@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Daitch–Mokotoff Soundex
+title: DM Soundex
 description: token filter for lucene
 img: /img/logo-dmsoundex.png
 link: https://github.com/netomi/dm-soundex
