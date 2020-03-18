@@ -131,6 +131,9 @@ margin: 10px;
 .center{
 text-align: center;
 }
+.left{
+text-align: left;
+}
 /**
  * Posts  **********************************************************
  */
@@ -189,27 +192,30 @@ display: table;
 clear: both;
 }
 .project {
-width: 33.33%;
-//height: 250px;
-height: 400px;
+width: 30%;
+height: 450px;
 float: left;
 vertical-align: middle;
 box-sizing: border-box;
+margin: 10px;
 padding: 10px;
+border: gray solid 1px;
 }
-.thumbnail{
+.thumbnail {
 width: 100%;
-height: 230px;
+height: 200px;
+box-sizing: border-box;
 overflow: hidden;
 }
-.thumbnail img{
-width: 500px;
+.thumbnail img {
+max-width: 100%;
 height: auto;
 position: relative;
-left: -25%;
-top: -5%;
+border: gray solid 1px;
+border-radius: 20%;
+padding: 2px;
 }
-.thumbnail a{
+.thumbnail a {
 float: left;
 position: relative;
 width: 100%;
@@ -227,12 +233,20 @@ color: $grey-color-light;
 padding: 40px;
 text-align: center;
 }
-.thumbnail a:hover span {
-display: block;
+.description {
+text-align: center;
 }
-/** 
+/**
  * Portfolio pages **********************************************************
 */
+.project-icon {
+float: right;
+border: gray solid 1px;
+padding: 5px;
+}
+.project-icon img {
+width: 120px;
+}
 .blankbox{
 background: $theme-color;
 }
