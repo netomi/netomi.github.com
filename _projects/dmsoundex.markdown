@@ -16,3 +16,15 @@ to the <a href="https://commons.apache.org/proper/commons-codec">Apache Commons 
 The project available at github is a standalone version to be used together with lucene.
 
 The actual implementation was merged into the <a href="https://github.com/apache/commons-codec/blob/master/src/main/java/org/apache/commons/codec/language/DaitchMokotoffSoundex.java">commons-codec repo</a>.
+
+Information about the filter can be found in the latest [documentation](https://lucene.apache.org/solr/guide/8_4/filter-descriptions.html#daitch-mokotoff-soundex-filter) for lucene / solr.
+
+The enable this filter you can add the following snippet to your solr configuration:
+
+```xml
+<analyzer>
+  <tokenizer class="solr.StandardTokenizerFactory"/>
+  <filter class="solr.DaitchMokotoffSoundexFilterFactory" inject="true"/>
+</analyzer>
+```
+
