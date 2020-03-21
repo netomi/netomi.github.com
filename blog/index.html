@@ -1,0 +1,24 @@
+---
+layout: default
+title: blog
+---
+
+<div class="header-bar">
+  <h1>My blog</h1>
+  <br/>
+  <p> This is where I write things down, mostly for the sake of gaining understanding, internalizing lessons learned, or simply because I thought it might be worth it. Hope you'll find some interesting bits and pieces. </p>
+  <ul class="blog-nav mt-4"> <li> <a href="/blog/tags/"> <i aria-hidden="true" class="fa fa-tags" title="tags icon" style="font-size: 90%;"></i>&nbsp;Tags </a> </li> <li> <a href="/blog/archive/"> <i aria-hidden="true" class="fa fa-archive" title="archive icon" style="font-size: 90%;"></i>&nbsp;Archive </a> </li> <li> <a href="/blog/atom.xml"> <i aria-hidden="true" class="fa fa-rss" title="RSS feed icon" style="font-size: 90%;"></i>&nbsp;Atom </a> </li> </ul>
+  <hr>
+</div>
+
+<ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
+        <p>{{ post.description }}</p>
+        <br/>
+        <hr/>
+      </li>
+    {% endfor %}
+</ul>

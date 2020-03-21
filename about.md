@@ -7,7 +7,8 @@ order: 3
 
 <br/>
 
-My name is Thomas Neidhart and this webpage outlines a few of the things I have done in the past and I am working on currently.
+This github page showcases a few of the things I have been working on and contains a blog
+about things I find interesting to share.
 
 In the past I have been involved as
 

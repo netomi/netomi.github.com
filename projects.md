@@ -7,7 +7,7 @@ order: 2
 
 <div class="projectFilter" style="text-align: center;">
   <a href="#" filter="*" class="current">All</a>
-  <a href="#" filter=".bytecode">Bytecode Engineering</a>
+  <a href="#" filter=".bytecode">Bytecode engineering</a>
   <a href="#" filter=".scientific">Scientific computing</a>
   <a href="#" filter=".game">Game theory</a>
   <a href="#" filter=".misc">Misc</a>

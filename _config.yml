@@ -17,6 +17,10 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: /blog/atom.xml
 
 # Pagination
 paginate: 5

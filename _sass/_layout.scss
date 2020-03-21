@@ -178,6 +178,14 @@ display: block;
 font-size: 42px;
 }
 
+.page-icon {
+    float: right;
+    border: gray solid 1px;
+    padding: 5px;
+}
+.page-icon img {
+    width: 240px;
+}
 /**
  * Portfolio grid **********************************************************
 */
