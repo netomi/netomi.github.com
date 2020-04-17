@@ -34,3 +34,5 @@ collections:
 exclude:
   - .idea
   - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock

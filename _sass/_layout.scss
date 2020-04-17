@@ -57,9 +57,9 @@ display: line;
     display: block;
     opacity: 0.75;
     width: 100%;
-    text-align: center;
-    padding-top: 25px;
-    line-height: 3em;
+    //text-align: center;
+    padding-top: 15px;
+    line-height: 2em;
     z-index: 25;
     h1{
         color: $theme-color;
@@ -68,6 +68,11 @@ display: line;
     h2{
         font-size:25px;
     }
+}
+
+.header-bar div {
+    font-size: 16px;
+    line-height: 1.5em;
 }
 
 /**
@@ -171,6 +176,7 @@ font-size: 18px;
 .post-meta {
 font-size: $small-font-size;
 color: $grey-color;
+margin-top: 5px;
 margin-bottom: 0px; 
 }
 .post-link {
