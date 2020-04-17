@@ -33,7 +33,8 @@ I am open for remote contracting positions, feel free to contact me.
 
 <span class="contacticon center">
 	<a href="mailto:thomas.neidhart@gmail.com"><i class="fa fa-envelope-square"></i></a>
-	<a href="https://github.com/netomi" target="_blank"><i class="fa fa-github-square"></i></a>
+    <a href="https://github.com/netomi" target="_blank"><i class="fa fa-github-square"></i></a>
+    <a href="https://stackoverflow.com/users/3784643/t-neidhart" target="_blank"><i class="fa fa-stack-overflow"></i></a>
 	<a href="https://www.linkedin.com/in/thomasneidhart/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
 </span>
 
