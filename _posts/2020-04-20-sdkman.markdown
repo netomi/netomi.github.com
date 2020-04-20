@@ -10,34 +10,34 @@ It is a common use-case to have multiple versions of various tools installed on 
 Notable examples are different JDK versions or gradle. For a long time I installed them manually
 and added aliases to my shell configuration like that:
 
-```shell script
+{% highlight shell %}
 alias gradle48="~/bin/gradle-4.8.1/bin/gradle"
-```
+{% endhighlight %}
 
 This works well for tools like gradle, but installing and maintaining multiple JDK versions was always
 a bit of a pain. Recently I found a very neat and amazing solution to this problem: [sdkman](https://sdkman.io/).
 
 It is a small tool that manages multiple versions of development kits on your computer. Installation is very easy:
 
-```shell script
+{% highlight shell %}
 $ curl -s "https://get.sdkman.io" | bash
-```
+{% endhighlight %}
 
 and afterwards add something like this to your _.bashrc_ or respective profile script:
 
-```shell script
+{% highlight shell %}
 [[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
-```
+{% endhighlight %}
 
 Now you should be able to use the _sdk_ command to install different SDKs or change the current version in use:
 
-```shell script
+{% highlight shell %}
 sdk list java
-```
+{% endhighlight %}
 
 will print something like this:
 
-```shell script
+{% highlight shell %}
 ================================================================================
 Available Java Versions
 ================================================================================
@@ -53,7 +53,7 @@ Available Java Versions
                |     | 11.0.6.hs    | adpt    | installed  | 11.0.6.hs-adpt      
                |     | 8.0.242.j9   | adpt    | installed  | 8.0.242.j9-adpt     
                | >>> | 8.0.242.hs   | adpt    | installed  | 8.0.242.hs-adpt     
-```
+{% endhighlight %}
 
 You can see that I have installed different JDK versions and version _8.0.242.hs-adpt_ is currently the default.
 To switch to another version by default you can use for example ```sdk use java 11.0.6.hs-adpt```.
