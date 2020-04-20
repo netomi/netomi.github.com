@@ -11,7 +11,7 @@ Notable examples are different JDK versions or gradle. For a long time I install
 and added aliases to my shell configuration like that:
 
 ```shell script
-alias gradle48='~/bin/gradle-4.8.1/bin/gradle'
+alias gradle48="~/bin/gradle-4.8.1/bin/gradle"
 ```
 
 This works well for tools like gradle, but installing and maintaining multiple JDK versions was always
