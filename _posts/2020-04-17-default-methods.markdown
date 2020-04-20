@@ -3,6 +3,7 @@ layout: post
 title:  handling default methods with dynamic proxies in java
 date:   2020-04-17 10:00:00
 description: default methods, dynamic proxies, java 8
+comments_id: 1
 ---
 
 Java has a very powerful feature to create [dynamic proxies](https://docs.oracle.com/javase/8/docs/technotes/guides/reflection/proxy.html) for
