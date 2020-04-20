@@ -1,0 +1,69 @@
+---
+layout: post
+title:  managing multiple jdk versions using sdkman
+date:   2020-04-20 12:00:00
+description: command-line tools
+comments_id: 2
+---
+
+It is a common use-case to have multiple versions of various tools installed on your computer.
+Notable examples are different JDK versions or gradle. For a long time I installed them manually
+and added aliases to my shell configuration like that:
+
+```shell script
+alias gradle48='~/bin/gradle-4.8.1/bin/gradle'
+```
+
+This works well for tools like gradle, but installing and maintaining multiple JDK versions was always
+a bit of a pain. Recently I found a very neat and amazing solution to this problem: [sdkman](https://sdkman.io/).
+
+It is a small tool that manages multiple versions of development kits on your computer. Installation is very easy:
+
+```shell script
+$ curl -s "https://get.sdkman.io" | bash
+```
+
+and afterwards add something like this to your _.bashrc_ or respective profile script:
+
+```shell script
+[[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
+```
+
+Now you should be able to use the _sdk_ command to install different SDKs or change the current version in use:
+
+```shell script
+sdk list java
+```
+
+will print something like this:
+
+```shell script
+================================================================================
+Available Java Versions
+================================================================================
+ Vendor        | Use | Version      | Dist    | Status     | Identifier
+--------------------------------------------------------------------------------
+ AdoptOpenJDK  |     | 14.0.0.j9    | adpt    |            | 14.0.0.j9-adpt      
+               |     | 14.0.0.hs    | adpt    |            | 14.0.0.hs-adpt      
+               |     | 13.0.2.j9    | adpt    |            | 13.0.2.j9-adpt      
+               |     | 13.0.2.hs    | adpt    |            | 13.0.2.hs-adpt      
+               |     | 12.0.2.j9    | adpt    |            | 12.0.2.j9-adpt      
+               |     | 12.0.2.hs    | adpt    |            | 12.0.2.hs-adpt      
+               |     | 11.0.6.j9    | adpt    |            | 11.0.6.j9-adpt      
+               |     | 11.0.6.hs    | adpt    | installed  | 11.0.6.hs-adpt      
+               |     | 8.0.242.j9   | adpt    | installed  | 8.0.242.j9-adpt     
+               | >>> | 8.0.242.hs   | adpt    | installed  | 8.0.242.hs-adpt     
+```
+
+You can see that I have installed different JDK versions and version _8.0.242.hs-adpt_ is currently the default.
+To switch to another version by default you can use for example ```sdk use java 11.0.6.hs-adpt```.
+
+Its an amazing tool and I can recommand it for anyone using a unix-based workstation.
+
+Note: in case you are wondering about the suffixes: _hs_ and _j9_. They refer to the actual JVM in use:
+
+* good old Hotspot
+* [OpenJ9](https://en.wikipedia.org/wiki/OpenJ9)
+
+The suffix _fx_ indicates whether the JDK comes pre-packages with the JavaFX / OpenJFX toolkit
+(which is not part of the Oracle / OpenJDK distributions anymore).
