@@ -86,7 +86,7 @@ of its minimization feature. R8 is the default minimization tool of the Android 
 
 The result of this proof-of-concept can be found in this [pull request](https://github.com/johnrengelman/shadow/pull/566) for the
 shadow jar plugin. Using R8 instead of just simply collecting transitive class dependencies results in a shaded jar that 
-contains only this shaded number of classes:
+contains only this number of shaded classes:
 
 {% highlight shell %}
 tn@proteus:~/workspace/netomi/uom/build/libs$ unzip -l uom-1.0-SNAPSHOT-all.jar  | grep shadow 
