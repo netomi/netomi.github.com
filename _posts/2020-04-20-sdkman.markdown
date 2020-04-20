@@ -38,7 +38,7 @@ sdk list java
 will print something like this:
 
 {% highlight shell %}
-================================================================================
+================================================================================\n
 Available Java Versions
 ================================================================================
  Vendor        | Use | Version      | Dist    | Status     | Identifier
@@ -53,6 +53,7 @@ Available Java Versions
                |     | 11.0.6.hs    | adpt    | installed  | 11.0.6.hs-adpt      
                |     | 8.0.242.j9   | adpt    | installed  | 8.0.242.j9-adpt     
                | >>> | 8.0.242.hs   | adpt    | installed  | 8.0.242.hs-adpt     
+...
 {% endhighlight %}
 
 You can see that I have installed different JDK versions and version _8.0.242.hs-adpt_ is currently the default.
