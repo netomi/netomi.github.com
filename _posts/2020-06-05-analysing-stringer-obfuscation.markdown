@@ -3,7 +3,7 @@ layout: post
 title:  analysing string encryption of stringer
 date:   2020-06-05 16:00:00
 description: byte code engineering, deobfuscation
-comments_id: 4
+comments_id: 5
 ---
 
 [Stringer](https://jfxstore.com/stringer/) is one of many commercial tools to apply obfuscation on java byte code level.
