@@ -10,7 +10,8 @@ category: scientific
 tags: java scientific_computing
 ---
 
-Orekit is a space dynamics library, providing low-level components for the development of flight dynamics applications.
+Orekit is a space dynamics library, providing low-level components for the development of flight dynamics applications. On top of that
+it is the best designed library that I am aware of and contains beautiful code from which you can learn a lot.
 
 I have provided some components to the library, mainly:
 

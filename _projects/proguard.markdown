@@ -23,3 +23,5 @@ Some of the notable personal contributions to the project:
 <li><a href="https://github.com/Guardsquare/proguard/tree/master/gradle">Gradle plugin</a></li>
 <li>Many bugfixes and small improvements</li>
 </ul>
+
+ProGuard is an amazing piece of software, difficult to master but once you get used to it, everything feels natural.
