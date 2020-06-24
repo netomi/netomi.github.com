@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Units of Measurement
-description: Orbit Exploration Toolkit
+description: Units of Measurement library
 img: /img/logo-uom.png
 link: https://github.com/netomi/uom
 role: owner
