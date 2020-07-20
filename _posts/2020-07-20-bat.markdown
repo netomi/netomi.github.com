@@ -1,0 +1,52 @@
+---
+layout: post
+title:  bat - library to process and analyze byte code
+date:   2020-07-20 13:00:00
+description: byte code engineering, dex format
+comments_id: 7
+---
+
+The last couple of years I was busy with processing byte code with an amazing tool called ProGuard / DexGuard. After deciding
+to step back and take a break, I used the available spare time to work on my own tool to process any kind of byte code (class file, dex file)
+and perform some useful analysis on them.
+
+You can access my initial take on this in my github repo [bat](https://github.com/netomi/bat) which is an acronym for *byte code analysis toolkit*.
+
+The first useful utility that I created is a tool that copies the behavior of _dexdump_ with some additional options, e.g. ability to
+filter the output for specific classes only:
+
+{% highlight java %}
+java -cp /path/to/commands-1.0-SNAPSHOT.jar com.github.netomi.bat.DexDumpCommand -c '**Hello**' classes.dex
+    
+...
+    
+Class #0 header:
+class_idx           : 10
+access_flags        : 1 (0x0001)
+superclass_idx      : 2
+interfaces_off      : 0 (0x0000)
+source_file_idx     : 0
+annotations_off     : 0 (0x0000)
+class_data_off      : 2209 (0x08a1)
+static_fields_size  : 3
+instance_fields_size: 0
+direct_methods_size : 3
+virtual_methods_size: 1
+
+Class #0
+  Class descriptor  : 'Lcom/example/HelloWorldActivity;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+...
+{% endhighlight %}
+
+The next thing to work on will be an *explainer* tool, which is intended as a utility to help with the shrinking
+capability of tools like ProGuard or R8. In general these tools work amazingly well, but it is quite difficult to
+understand why something is actually kept from being shrunk or which specific rule is responsible for that. The *explainer*
+will trace the exact reason why a certain class / method / field is being kept. Something that might also be very useful is
+the other way around: what items will be kept because of a specific method or class. A tool like that might help to reduce
+dependencies or complexity in the code.
+
+Feel free to leave comments on other useful things that you would like to see in the near future.
