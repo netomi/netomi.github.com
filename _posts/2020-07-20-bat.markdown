@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  bat - library to process and analyze byte code
+title:  Bat - library to process and analyze byte code
 date:   2020-07-20 13:00:00
 description: byte code engineering, dex format
 comments_id: 7

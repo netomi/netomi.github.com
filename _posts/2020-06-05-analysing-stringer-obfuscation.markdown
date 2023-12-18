@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  analysing string encryption of stringer
+title:  Analysing string encryption of stringer
 date:   2020-06-05 16:00:00
 description: byte code engineering, deobfuscation
 comments_id: 5

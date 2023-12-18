@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  managing multiple jdk versions using sdkman
+title:  Managing multiple jdk versions using sdkman
 date:   2020-04-20 12:00:00
 description: command-line tools
 comments_id: 2

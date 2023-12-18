@@ -1,13 +1,13 @@
 ---
 layout: page
-title: about
+title: About
 permalink: /about/
 order: 3
 ---
 
 <br/>
 
-This github page showcases a few of the things I have been working on and contains a blog
+This GitHub page showcases a few of the things I have been working on and contains a blog
 about things I find interesting to share.
 
 In the past I have been involved as
@@ -36,5 +36,5 @@ I am open for remote contracting positions, feel free to contact me.
   <a href="https://github.com/netomi" target="_blank"><i class="fa fa-github-square"></i></a>
   <a href="https://stackoverflow.com/users/3784643/t-neidhart" target="_blank"><i class="fa fa-stack-overflow"></i></a>
   <a href="https://www.linkedin.com/in/thomasneidhart/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-</span
+</span>
 

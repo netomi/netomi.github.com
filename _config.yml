@@ -1,5 +1,5 @@
 # Site settings
-title: thomas neidhart - open source projects
+title: Thomas Neidhart - Open Source Projects
 email: thomas.neidhart@gmail.com
 description: >
   open source software development, bytecode engineering, algorithm design
@@ -36,3 +36,8 @@ exclude:
   - .jekyll-cache
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

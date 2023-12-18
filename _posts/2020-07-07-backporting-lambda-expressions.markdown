@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  backporting lambda expressions
+title:  Backporting lambda expressions
 date:   2020-07-07 12:00:00
 description: java 8, lambda expressions, backporting
 comments_id: 6
