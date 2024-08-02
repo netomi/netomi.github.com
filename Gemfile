@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'jekyll-seo-tag'
-gem "github-pages", "~> 231", group: :jekyll_plugins
+gem 'jekyll-dash', '~> 2'
+gem 'jekyll-sass-converter', '~> 2.0'
+gem 'liquid-md5'
+gem 'jekyll-tagging'
 
-gem "webrick", "~> 1.8"

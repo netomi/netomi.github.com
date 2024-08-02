@@ -2,7 +2,7 @@
 layout: post
 title:  Bat - library to process and analyze byte code
 date:   2020-07-20 13:00:00
-description: byte code engineering, dex format
+tags:   byte-code-engineering dex
 comments_id: 7
 ---
 

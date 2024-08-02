@@ -2,7 +2,7 @@
 layout: post
 title:  Minimizing shaded dependencies with gradle and R8
 date:   2020-04-20 13:00:00
-description: shrinking, gradle, r8
+tags:   shrinking gradle r8
 comments_id: 3
 ---
 

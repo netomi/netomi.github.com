@@ -1,42 +1,65 @@
-# Site settings
-title: Thomas Neidhart - Open Source Projects
+title: netomi
+url: https://netomi.github.io
+author: Thomas Neidhart
 email: thomas.neidhart@gmail.com
-description: >
-  open source software development, bytecode engineering, algorithm design
-url: "https://netomi.github.io"
+description: > # this means to ignore newlines until "show_exerpts:"
+  <a href="/about">Thomas</a> is a software engineer specialized in byte code engineering, scientific applications, simulations and anything <a href="/projects">interesting</a>.
+show_excerpts: false # set to true to show excerpts on the homepage
 github_username: netomi
 repository: netomi/netomi.github.io
 google_analytics: UA-70394167-2
 
-# Build settings
-markdown: kramdown
-
-highlighter: rouge
-
-plugins:
-  - jekyll-paginate
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-
-feed:
-  path: /blog/atom.xml
-
-# Pagination
-paginate: 10
+paginate: 7
 paginate_path: "/blog/page:num/"
+
+tag_permalink_style: pretty
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+# jekyll-dash date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+dash:
+  date_format: "%b %-d, %Y"
+
+  disqus:
+    shortname: netomi-github-io
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    - url: mailto:thomas.neidhart@gmail.com
+      icon: envelope
+      color: yellow
+    - url: https://stackoverflow.com/users/3784643/t-neidhart
+      icon: stack-overflow
+      color: yellow
+    - url: https://www.linkedin.com/in/thomasneidhart/
+      icon: linkedin-in
+      color: yellow
+    - url: https://github.com/netomi
+      icon: github-square
+      color: yellow
+
+  avatar_source: local
+  avatar_path: /public/bodypaint_small.png
 
 collections:
   projects:
     output: true
     permalink: /projects/:path/
 
+# Build settings
+theme: jekyll-dash
+
+plugins:
+  - liquid-md5
+  - jekyll/tagging
+
 exclude:
   - .idea
   - .jekyll-cache
   - Gemfile
   - Gemfile.lock
-  - node_modules
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/

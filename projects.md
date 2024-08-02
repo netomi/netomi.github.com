@@ -2,7 +2,6 @@
 layout: page
 title: Projects
 permalink: /projects/
-order: 2
 ---
 
 <div class="projectFilter" style="text-align: center;">
@@ -26,26 +25,20 @@ order: 2
         <img class="thumbnail" src="{{ project.img }}"/>
         {% else %}
         <div class="thumbnail blankbox"></div>
-        {% endif %}    
+        {% endif %}
         </a>
-
     </div>
 
     <div class="description">
-        <span>
-        <h1>{{ project.title }}</h1>
-        <br/>
+      <span>
+        <h3>{{ project.title }}</h3>
         <p>{{ project.description }}</p>
-
-        <ul class="left">        
+        <ul class="left">
         {% for tag in project.tags %}
-
         <li>{{ tag | replace:'_',' ' }}</li>
-        
         {% endfor %}
         </ul>
-
-        </span>
+      </span>
     </div>
 </div>
 

@@ -2,7 +2,7 @@
 layout: post
 title:  Handling default methods with dynamic proxies in java
 date:   2020-04-17 10:00:00
-description: default methods, dynamic proxies, java 8
+tags:   java dynamic-proxy default-methods
 comments_id: 1
 ---
 
