@@ -3,7 +3,7 @@ url: https://netomi.github.io
 author: Thomas Neidhart
 email: thomas.neidhart@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  <a href="/about">Thomas</a> is a software engineer specialized in byte code engineering, scientific applications, simulations and anything <a href="/projects">interesting</a>.
+  <a href="/about">Thomas</a> is a software engineer specialized in byte code engineering, scientific applications, simulations and anything that <a href="/projects">interests</a> him.
 show_excerpts: false # set to true to show excerpts on the homepage
 github_username: netomi
 repository: netomi/netomi.github.io

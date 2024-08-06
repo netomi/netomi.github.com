@@ -10,14 +10,14 @@ The last couple of years I was busy with processing byte code with an amazing to
 to step back and take a break, I used the available spare time to work on my own tool to process any kind of byte code (class file, dex file)
 and perform some useful analysis on them.
 
-You can access my initial take on this in my github repo [bat](https://github.com/netomi/bat) which is an acronym for *byte code analysis toolkit*.
+You can access my initial take on this in my GitHub repo [bat](https://github.com/netomi/bat) which is an acronym for *byte code analysis toolkit*.
 
 The first useful utility that I created is a tool that copies the behavior of _dexdump_ with some additional options, e.g. ability to
 filter the output for specific classes only:
 
 {% highlight java %}
 java -cp /path/to/commands-1.0-SNAPSHOT.jar com.github.netomi.bat.DexDumpCommand -c '**Hello**' classes.dex
-    
+
 ...
     
 Class #0 header:
