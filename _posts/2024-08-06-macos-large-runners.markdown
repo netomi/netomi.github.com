@@ -11,7 +11,7 @@ In 2023, GitHub introduced new powerful macOS runners for GitHub Actions.
 These [runners](https://docs.github.com/en/actions/using-github-hosted-runners/about-larger-runners/running-jobs-on-larger-runners?platform=mac#available-macos-larger-runners) 
 have a considerable higher amount of processors / memory and disk space allocated to them to speed up the execution of workflows.
 This advantage comes at a cost though, as billing per minute of executed workflow time is considerably higher as compared to normal runners (see [billing for runners](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)), 
-on top of usual minute multiplier for macOS runners (each minute of executed workflow time on a macOS runner counts as 10 minutes for billing purposes).
+on top of the usual minute multiplier for macOS runners (each minute of executed workflow time on a macOS runner counts as 10 minutes for billing purposes).
 
 <br/>
 In order to use such a macOS large runner, you can simply add a `runs-on: <runner-type>` to your job definition, e.g. using `macos-latest-large` as runner type:
@@ -31,12 +31,11 @@ jobs:
 {% endhighlight %}
 
 <br/>
-Additionally, your organization needs to have a `GitHub Team` or `GitHub Enterprise Cloud` plan to be able to use such a macOS large runner, otherwise execution of
-workflows using such a runner will fail to run. Once your organization is eligible to use large runners, you probably want to control the access to such runners for the repositories in your organization
-to avoid surprises when you receive your next invoice. GitHub offers a convenient way to define [runner groups](https://docs.github.com/en/actions/using-github-hosted-runners/about-larger-runners/controlling-access-to-larger-runners) to define which repositories can access such large runners.
+Additionally, your organization needs to have a `GitHub Team` or `GitHub Enterprise Cloud` plan to be able to use such a macOS large runner, otherwise workflows using such a runner will fail to run. Once your organization is eligible to use large runners, you probably want to control the access to such runners for the repositories in your organization
+to avoid surprises when you receive your next invoice. GitHub offers a convenient way to define [runner groups](https://docs.github.com/en/actions/using-github-hosted-runners/about-larger-runners/controlling-access-to-larger-runners) to control which repositories can access such large runners.
 
 <br/>
-Unfortunately, such runner groups can only be defined for `linux` and `windows` runners, there is simply no way to prevent that `macOS` large runners are being used by any of your repositories once they are configured in a workflow as described above. 
+Unfortunately, such runner groups can only be defined for `linux` and `windows` runners, there is simply no way to prevent that `macOS` large runners are being used by any of your repositories once their use is configured in a workflow as described above. 
 This poses a problem for non-profit organizations (like the [Eclipse Foundation](https://www.eclipse.org)) that host a lot of projects and their associated repositories on GitHub as it might result in higher than expected billing expenses as some projects try using such large runners
 to speed up their workflows without realizing the consequences.
 
