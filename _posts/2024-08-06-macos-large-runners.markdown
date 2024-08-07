@@ -31,7 +31,7 @@ jobs:
 {% endhighlight %}
 
 <br/>
-Additionally, your organization needs to have a `GitHub Team` or `GitHub Enterprise Cloud` plan to be able to use such a macOS large runner, otherwise workflows using such a runner will fail to run. Once your organization is eligible to use large runners, you probably want to control the access to such runners for the repositories in your organization
+Additionally, your organization needs to have a `GitHub Team` or `GitHub Enterprise Cloud` plan to be able to use such a macOS large runner (which is now the case for all Eclipse projects hosted on GitHub as of 2024), otherwise workflows using such a runner will fail to run. Once your organization is eligible to use large runners, you probably want to control the access to such runners for the repositories in your organization
 to avoid surprises when you receive your next invoice. GitHub offers a convenient way to define [runner groups](https://docs.github.com/en/actions/using-github-hosted-runners/about-larger-runners/controlling-access-to-larger-runners) to control which repositories can access such large runners.
 
 <br/>
@@ -56,13 +56,13 @@ After studying the available [GitHub Rest API](https://docs.github.com/en/rest?a
 To receive the necessary webhook events from GitHub in case a workflow is being scheduled to run you have to set up an organization or repository webhook, listen for the events and apply the logic. 
 
 <br/>
-At the [Eclipse Foundation](https://www.eclipse.org) we are operating an open-source project called [Otterdog](https://github.com/eclipse-csi/otterdog) in order configure our numerous organizations and repositories hosted on GitHub at scale.
+At the [Eclipse Foundation](https://www.eclipse.org) we are operating an open-source project called [Otterdog](https://github.com/eclipse-csi/otterdog) in order to configure our numerous organizations and repositories hosted on GitHub at scale.
 This tool is effectively a GitHub App and is installed for all our projects / organizations on GitHub and already can listen to various events sent from GitHub. So naturally we added the above logic to this tool and allowed to define 
 which organizations are allowed to use such large runners via a configuration file (see [this](https://github.com/eclipse-tractusx/.eclipsefdn/blob/main/otterdog/policies/macos_large_runners.yml) example).
 
 <br/>
 This allows us to control the use of macOS large runners which unfortunately is not yet possible through any of the administration consoles at GitHub. 
-On the other hand, our implemented workaround showcases the power of GitHub Apps how you can utilize them to adjust your GitHub experience to your organizational needs.
+On the other hand, our implemented workaround showcases the power of GitHub Apps on how you can utilize them to adjust your GitHub experience to your organizational needs.
 
 <br/>
 Feel free to leave comments on other useful things that you would like to see in the near future.
