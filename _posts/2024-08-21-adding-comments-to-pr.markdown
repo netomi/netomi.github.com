@@ -56,6 +56,8 @@ and upload the generated data as an artifact. See the snippet below for the rele
 
 {% highlight yaml %}
 {% raw %}
+name: Java Test and Coverage
+
 ...
 
 - name: Generate coverage comment
@@ -93,7 +95,7 @@ file **pr-number.txt** to know to which PR that comment should be added in the s
 
 Now that we have a workflow to calculate the code coverage of the PR and generate a comment that we would like to add to it,
 we just need a [workflow](https://github.com/eclipse-uprotocol/up-java/blob/main/.github/workflows/coverage-comment-pr.yml) that gets triggered
-when the first workflow is completed:
+when the first workflow (filtered by its name) is completed:
 
 {% highlight yaml %}
 {% raw %}
