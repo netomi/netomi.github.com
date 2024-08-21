@@ -91,7 +91,7 @@ file **pr-number.txt** to know to which PR that comment should be added in the s
 
 ### Any comment?
 
-Now that we have a workflow to generate the code coverage of the PR and generate a comment that we would like to add to the PR,
+Now that we have a workflow to calculate the code coverage of the PR and generate a comment that we would like to add to it,
 we just need a [workflow](https://github.com/eclipse-uprotocol/up-java/blob/main/.github/workflows/coverage-comment-pr.yml) that gets triggered
 when the first workflow is completed:
 
@@ -153,6 +153,8 @@ jobs:
             });
 {% endraw %}
 {% endhighlight %}
+
+The workflow will download the artifact attached to the workflow run that triggered it and add a comment to the associated PR with the attached content.
 
 > **_NOTE_**: There are pre-made [3rd party actions](https://github.com/marketplace?query=download+artifact+from+workflow+run) to 
 download artifacts from previous workflow runs that could be used to further simplify such a workflow.
