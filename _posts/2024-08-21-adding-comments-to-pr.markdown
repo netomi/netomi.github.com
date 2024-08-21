@@ -55,6 +55,7 @@ The [first workflow](https://github.com/eclipse-uprotocol/up-java/blob/main/.git
 and upload the generated data as an artifact. See the snippet below for the relevant steps:
 
 {% highlight yaml %}
+{% raw %}
 ...
 
 - name: Generate coverage comment
@@ -62,17 +63,17 @@ and upload the generated data as an artifact. See the snippet below for the rele
   with:
     script: |
       const fs = require('fs');
-      const COVERAGE_PERCENTAGE = `\${{ env.COVERAGE_PERCENTAGE }}`;
-      const COVERAGE_REPORT_PATH = `https://github.com/${{ github.repository }}/actions/runs/\${{ github.run_id }}/`;
+      const COVERAGE_PERCENTAGE = `${{ env.COVERAGE_PERCENTAGE }}`;
+      const COVERAGE_REPORT_PATH = `https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/`;
         
       fs.mkdirSync('./pr-comment', { recursive: true });
         
-      var pr_number = `\${{ github.event.number }}`;
+      var pr_number = `${{ github.event.number }}`;
       var body = `
         Code coverage report is ready! :chart_with_upwards_trend:
         
-        - **Code Coverage Percentage:** \${COVERAGE_PERCENTAGE}%
-        - **Code Coverage Report:** [View Coverage Report](\${COVERAGE_REPORT_PATH})
+        - **Code Coverage Percentage:** ${COVERAGE_PERCENTAGE}%
+        - **Code Coverage Report:** [View Coverage Report](${COVERAGE_REPORT_PATH})
       `;
         
       fs.writeFileSync('./pr-comment/pr-number.txt', pr_number);
@@ -82,6 +83,7 @@ and upload the generated data as an artifact. See the snippet below for the rele
   with:
     name: pr-comment
     path: pr-comment/
+{% endraw %}
 {% endhighlight %}
 
 The comment that shall be added to the PR is stored in a file **body.txt** while the associated PR number is stored in a 
@@ -94,6 +96,7 @@ we just need a [workflow](https://github.com/eclipse-uprotocol/up-java/blob/main
 when the first workflow is completed:
 
 {% highlight yaml %}
+{% raw %}
 ...
 
 on:
@@ -118,7 +121,7 @@ jobs:
             var artifacts = await github.rest.actions.listWorkflowRunArtifacts({
                owner: context.repo.owner,
                repo: context.repo.repo,
-               run_id: \${{github.event.workflow_run.id }},
+               run_id: ${{github.event.workflow_run.id }},
             });
             var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
               return artifact.name == "pr-comment"
@@ -130,12 +133,12 @@ jobs:
                archive_format: 'zip',
             });
             var fs = require('fs');
-            fs.writeFileSync('\${{github.workspace}}/pr-comment.zip', Buffer.from(download.data));
+            fs.writeFileSync('${{github.workspace}}/pr-comment.zip', Buffer.from(download.data));
       - run: unzip pr-comment.zip
       - name: 'Comment on PR'
         uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
-          github-token: \${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             var fs = require('fs');
 
@@ -148,6 +151,7 @@ jobs:
               issue_number: issue_number,
               body: body
             });
+{% endraw %}
 {% endhighlight %}
 
 > **_NOTE_**: There are pre-made [3rd party actions](https://github.com/marketplace?query=download+artifact+from+workflow+run) to 
