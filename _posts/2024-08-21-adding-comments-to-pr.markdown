@@ -39,7 +39,7 @@ However, the downside of that approach is that you need to think hard about the 
 ### Git (sic!) better
 
 Some investigation of available [workflow triggers](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows) reveals the ```workflow_run```
-trigger that allows to react once a workflow has been completed and workflow triggered by that run in the context of the repository itself. That would allow us to do the following:
+trigger, that allows to react once a workflow has completed, and workflows triggered by that run in the context of the repository itself. That would allow us to do the following:
 
 - run a workflow with ```pull_request``` trigger to perform some action, e.g. calculate the code coverage of the code in a PR
 - store the result of this workflow as an artifact attached to the workflow run
