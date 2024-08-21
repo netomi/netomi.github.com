@@ -62,17 +62,17 @@ and upload the generated data as an artifact. See the snippet below for the rele
   with:
     script: |
       const fs = require('fs');
-      const COVERAGE_PERCENTAGE = `${{ env.COVERAGE_PERCENTAGE }}`;
-      const COVERAGE_REPORT_PATH = `https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/`;
+      const COVERAGE_PERCENTAGE = `\${{ env.COVERAGE_PERCENTAGE }}`;
+      const COVERAGE_REPORT_PATH = `https://github.com/${{ github.repository }}/actions/runs/\${{ github.run_id }}/`;
         
       fs.mkdirSync('./pr-comment', { recursive: true });
         
-      var pr_number = `${{ github.event.number }}`;
+      var pr_number = `\${{ github.event.number }}`;
       var body = `
         Code coverage report is ready! :chart_with_upwards_trend:
         
-        - **Code Coverage Percentage:** ${COVERAGE_PERCENTAGE}%
-        - **Code Coverage Report:** [View Coverage Report](${COVERAGE_REPORT_PATH})
+        - **Code Coverage Percentage:** \${COVERAGE_PERCENTAGE}%
+        - **Code Coverage Report:** [View Coverage Report](\${COVERAGE_REPORT_PATH})
       `;
         
       fs.writeFileSync('./pr-comment/pr-number.txt', pr_number);
@@ -118,7 +118,7 @@ jobs:
             var artifacts = await github.rest.actions.listWorkflowRunArtifacts({
                owner: context.repo.owner,
                repo: context.repo.repo,
-               run_id: ${{github.event.workflow_run.id }},
+               run_id: \${{github.event.workflow_run.id }},
             });
             var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
               return artifact.name == "pr-comment"
@@ -130,12 +130,12 @@ jobs:
                archive_format: 'zip',
             });
             var fs = require('fs');
-            fs.writeFileSync('${{github.workspace}}/pr-comment.zip', Buffer.from(download.data));
+            fs.writeFileSync('\${{github.workspace}}/pr-comment.zip', Buffer.from(download.data));
       - run: unzip pr-comment.zip
       - name: 'Comment on PR'
         uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: \${{ secrets.GITHUB_TOKEN }}
           script: |
             var fs = require('fs');
 
