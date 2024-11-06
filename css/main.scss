@@ -10,6 +10,12 @@
         "comments"
 ;
 
+.wrapper {
+  max-width: -webkit-calc(1000px - 30px);
+  max-width:         calc(1000px - 30px);
+  text-align: left;
+}
+
 .projectFilter a {
   margin-right: 5px;
   margin-left: 5px;
